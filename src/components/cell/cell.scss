@@ -1,0 +1,36 @@
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+
+.cell-snake {
+  background-color: #4ab078;
+  background-image: url("../../assets/images/www1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.bonus {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: -15px;
+    top: -15px;
+    background-image: url("../../assets/images/mouse.png");
+    background-size: 100%;
+    transition: transform 0.5s ease;
+  }
+}
+
+.cell-snake.bonus {
+  background-color: yellow;
+  &::after {
+    transform: scale(0.1);
+  }
+}

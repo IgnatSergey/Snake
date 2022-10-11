@@ -1,0 +1,58 @@
+.field-container {
+    flex-grow: 1;
+    display: flex;
+}
+
+.field {
+    background-image: url("../../assets/images/sand.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loose-baner {
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    top: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.field-panel {
+    flex-grow: 1;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+
+.stop-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.restart-button {
+    margin-top: 10px;
+}
+
+.timer {
+    margin-top: 10px;
+}
+
+.info-list {
+    margin-top: auto;
+}
+
+.info-term {
+    display: flex;
+}
+
+.info-definition {
+    margin-left: 10px;
+}

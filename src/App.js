@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import Field from './components/field/Field';
+import { connect } from "react-redux";
+import StartPage from './components/startPage/StartPage';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+  return (<div className='container'>{props.field ? <Field /> : <StartPage />}</div>)
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    field: state.field.isShowField
+  };
+};
+
+export default connect(mapStateToProps, {})(App);
+
